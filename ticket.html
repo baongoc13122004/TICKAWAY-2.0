@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKAWAY</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a class="active" href="ticket.html">Vé</a></li>
+                <li><a  href="about.html">Về chúng tôi</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="Sell.html">Bán vé</a></li>
+                
+                <li id="lg-bag"><a href="login.html"><i class="fas fa-user"></i></a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times "></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="login.html"><i class="fas fa-user"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+            
+        </div>
+    </section>
+    
+    
+    <section id="page-header" class="ticket">
+        <h2>#Vé</h2>
+
+        <p>Những thể loại mà bạn có thể tìm kiếm.</p>
+    
+    </section>
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="img/t1.png" alt="">
+            <h6>CONCERT</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/t2.png" alt="">
+            <h6>THỂ THAO</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/t3.png" alt="">
+            <h6>NHẠC KỊCH</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/t4.png" alt="">
+            <h6>PHIM ẢNH</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/t5.png" alt="">
+            <h6>GIẢI TRÍ</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/t6.png" alt="">
+            <h6>CỘNG ĐỒNG</h6>
+        </div>
+
+    </section>
+
+    <section id="introduce" class="section-p1">
+        <h2>Sport</h2>
+        <div class="pro-container">
+            
+                <div class="pro"  onclick="redirectToFootballPage()">
+                    <div><img src="img/s1.jpg" alt=""></div>
+                    <div class="des">
+                        <span><b>Bóng Đá</b></span>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/s3.jpg" alt="">
+                    <div class="des">
+                        <span><b>Bóng Rổ</b></span>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/s21.jpg" alt="">
+                    <div class="des">
+                        <span><b>Bóng Chuyền</b></span>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/s41.jpg" alt="">
+                    <div class="des">
+                        <span><b>Cầu Lông</b></span>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/s1.jpeg" alt="">
+                    <div class="des">
+                        <span><b>Điền Kinh</b></span>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/s5.jpg" alt="">
+                    <div class="des">
+                        <span><b>Đạp Xe</b></span>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="explore-container">
+            <button id="explore-btn">Explore More</button>
+            <button id="hide-btn" style="display: none;">Hidden</button>
+        </div>
+        <h2>Concert</h2>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/c1.jpg" alt="">
+                <div class="des">
+                    <span><b>Đêm Nhạc</b></span>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="img/c2.jpg" alt="">
+                <div class="des">
+                    <span><b>Live Concert</b></span>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="img/c3.jpg" alt="">
+                <div class="des">
+                    <span><b>Lễ Hội Âm Nhạc</b></span>
+                </div>
+            </div>
+            <div class="pro" onclick="redirectToShowPage()">
+                <img src="img/c4.jpeg" alt="">
+                <div class="des">
+                    <span><b>Show</b></span>
+                </div>
+            </div>
+        </div>
+        <div class="explore-container">
+            <button id="explore-btn">Explore More</button>
+        </div>
+        <h2>Performance Arts</h2>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/d1.jpg" alt="">
+                <div class="des">
+                    <span><b>Kịch</b></span>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="img/d2.jpg" alt="">
+                <div class="des">
+                    <span><b>Opera</b></span>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="img/d3.jpeg" alt="">
+                <div class="des">
+                    <span><b>Phim</b></span>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="img/d4.jpg" alt="">
+                <div class="des">
+                    <span><b>Rối Nước</b></span>
+                </div>
+            </div>
+        </div>
+        <div class="explore-container">
+            <button id="explore-btn">Explore More</button>
+        </div>
+        <h2>Entertainment</h2>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/e1.jpg" alt="">
+                <div class="des">
+                    <span><b>Khu vui chơi</b></span>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="img/e2.jpg" alt="">
+                <div class="des">
+                    <span><b>Festival</b></span>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="img/e3.jpg" alt="">
+                <div class="des">
+                    <span><b>Tham quan</b></span>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="img/e5.jpg" alt="">
+                <div class="des">
+                    <span><b>Sự kiện văn hóa</b></span>
+                </div>
+            </div>
+        </div>
+        <div class="explore-container">
+            <button id="explore-btn">Explore More</button>
+        </div>
+        <h2>Community</h2>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/t1.jpg" alt="">
+                <div class="des">
+                    <span><b>Talkshow</b></span>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="img/t2.webp" alt="">
+                <div class="des">
+                    <span><b>Từ thiện</b></span>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="img/t3.jpg" alt="">
+                <div class="des">
+                    <span><b>Workshop</b></span>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="img/t4.jpg" alt="">
+                <div class="des">
+                    <span><b>Hướng nghiệp</b></span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="explore-container">
+            <button id="explore-btn">Explore More</button>
+        </div>
+    
+    </section>
+    <section id="banner" class="section-m1">
+        <h4>Repair Services</h4>
+        <h2>Upto <span>70% Off</span> All Ticket</h2>
+        <button class="normal">Explore More</button>
+    </section>
+    
+    
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo1.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> Dai Hoc Kinh Te Quoc Dan</p>
+            <p><strong>Phone: </strong> (+84)388271445</p>
+            <p><Strong>Hours:</Strong> 8:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f "></i>
+                    <i class="fab fa-instagram "></i>
+                    <i class="fab fa-twitter "></i>
+                    <i class="fab fa-youtube "></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/app.jpg" alt="">
+                <img src="img/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay.png" alt="">
+        </div>
+        
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

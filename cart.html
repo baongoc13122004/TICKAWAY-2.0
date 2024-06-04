@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKAWAY</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="ticket.html">Vé</a></li>
+                <li><a href="about.html">Về chúng tôi</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a  href="Sell.html">Bán vé</a></li>
+               
+                <li id="lg-bag"><a href="login.html"><i class="fas fa-user"></i></a></li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times "></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="login.html"><i class="fas fa-user"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+            
+        </div>
+    </section>
+   
+        
+    
+    
+    <section id="page-header" >
+        <h2>#Thanh_Toán</h2>
+
+        <p>Thanh toán giỏ hàng của bạn nhé</p>
+    
+    </section>
+    <section id="cart" class="section-p1">
+        <table width="100%"> 
+            <thead>
+                <tr>
+                    <td>Xóa</td>
+                    <td>Vé</td>
+                    <td>Giá</td>
+                    <td>Số Lượng</td>
+                    <td>Tổng thu</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="far fa-times-circle"></i></td>
+                    <td>Man United vs Man City </td>
+                    <td>100.000đ</td>
+                    <td><input type="number" value="1"></td>
+                    <Td>200.000đ</Td>
+                </tr>
+                <tr>
+                    <td><i class="far fa-times-circle"></i></td>
+                    <td>Man United vs Man City </td>
+                    <td>150.000đ</td>
+                    <td><input type="number" value="1"></td>
+                    <Td>150.000đ</Td>
+                </tr>
+                <tr>
+                    <td><i class="far fa-times-circle"></i></td>
+                    <td>Man United vs Man City </td>
+                    <td>200.000đ</td>
+                    <td><input type="number" value="1"></td>
+                    <Td>200.000đ</Td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Mã Giảm Giá</h3>
+            <div>
+                <input type="text" placeholder="Enter Your Coupon">
+                <button class="normal">Áp Dụng</button>
+            </div>
+        </div>
+
+        <div id="subtotal">
+            <h3>Thanh Toán</h3>
+            <table>
+                <tr>
+                    <td>Tổng thu giỏ hàng</td>
+                    <td>550.000đ</td>
+                </tr>
+                <tr>
+                    <td>Giảm giá</td>
+                    <td>10%</td>
+                </tr>
+                <tr>
+                    <td>Phí Ship</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td><strong>Tổng</strong></td>
+                    <td><strong>495.000đ</strong></td>
+                </tr>
+            </table>
+            <button id="xacNhanButton1" class="normal">Xác Nhận</button>
+        </div>
+    </section>
+    <script>
+        document.getElementById("xacNhanButton1").addEventListener("click", function() {
+        // Chuyển hướng đến trang profile.html
+        window.location.href = "profile.html";
+    });
+</script>
+    
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo1.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> Dai Hoc Kinh Te Quoc Dan</p>
+            <p><strong>Phone: </strong> (+84)388271445</p>
+            <p><Strong>Hours:</Strong> 8:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f "></i>
+                    <i class="fab fa-instagram "></i>
+                    <i class="fab fa-twitter "></i>
+                    <i class="fab fa-youtube "></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/app.jpg" alt="">
+                <img src="img/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay.png" alt="">
+        </div>
+        
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

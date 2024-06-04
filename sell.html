@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKAWAY</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+        .button {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 200px;
+          }
+      
+          .bs-example {
+            margin: 0 auto; /* Căn giữa màn hình */
+            margin-top: 20px;
+            width: 800px;
+            border: 1px solid #fff;
+            padding: 30px;
+            border-radius: 20px;
+            background-color: lightgray;
+          }
+      
+          
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="ticket.html">Vé</a></li>
+                <li><a href="about.html">Về chúng tôi</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a class="active" href="Sell.html">Bán vé</a></li>
+                
+                <li id="lg-bag"><a href="login.html"><i class="fas fa-user"></i></a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times "></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="login.html"><i class="fas fa-user"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+            
+        </div>
+    </section>
+   
+    
+    <section id="page-header" >
+        <h2>#Bán Vé</h2>
+
+        <p>Đăng bán những vé mà bạn có</p>
+    
+    </section>
+    <div class="bs-example">
+        <form method = "post" action ="/addingEvent" enctype = "multipart/form-data"       class="form-horizontal" id="registration">
+        <div class="form-group row">
+          <label for="inputEmail" class="col-sm-2 col-form-label"><strong>Tên sự kiện</strong></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="ename" placeholder="eventname"name="ename"  required>
+            </div>
+        </div> 
+        <div class="form-group row">
+          <label for="inputEmail" class="col-sm-2 col-form-label"><strong>Mô tả vé</strong></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="edetails" placeholder="Description" name="edetails" required>
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail" class="col-sm-2 col-form-label"><strong>Quy định vé</strong></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="edetails" placeholder="Vui lòng đính kèm link quy định của sự kiện hoặc mô tả cụ thể." name="edetails" required>
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail" class="col-sm-2 col-form-label"><strong>Số vé</strong> </label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="npeople" placeholder="maximum no of ticket"name="npeople" required>
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="paymentMethod" class="col-sm-2 col-form-label"><strong>Loại Vé</strong></label>
+          <div class="col-sm-10">
+              <select class="form-control" id="paymentMethod" name="paymentMethod">
+                  <option value="debit">Vé cứng/ Vé giấy</option>
+                  <option value="credit">Vé điện tử</option>
+                  <option value="momo">Vé điện tử và vòng</option>
+                  <option value="bank">Chuyển vé trực tiếp từ nơi bán vé gốc</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group row">
+        <label for="paymentMethod" class="col-sm-2 col-form-label"><strong>Tình trạng vé</strong></label>
+        <div class="col-sm-10">
+            <select class="form-control" id="paymentMethod" name="paymentMethod">
+                <option value="debit">Tôi đã sẵn sàng cung cấp vé</option>
+                <option value="credit">Tôi sẽ cung cấp vé sau</option>
+            </select>
+        </div>
+    </div>
+        <div class="form-group row">
+          <label for="inputEmail" class="col-sm-2 col-form-label"><strong>Thời gian bắt đầu</strong></label>
+            <div class="col-sm-10">
+              <input type="datetime-local" class="form-control" id="stime" placeholder="booking start time" name = "stime" required>
+            </div>
+        </div>
+            
+        <div class="form-group row">
+          <label for="paymentMethod" class="col-sm-2 col-form-label"><strong>Phương thức thanh toán</strong></label>
+          <div class="col-sm-10">
+              <select class="form-control" id="paymentMethod" name="paymentMethod">
+                  <option value="debit">Debit Card</option>
+                  <option value="credit">Credit Card</option>
+                  <option value="momo">Momo</option>
+                  <option value="bank">Bank Transfer</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group row" >
+        <label for="deposit" class="col-sm-2 col-form-label"><strong>Hình thức cọc</strong></label>
+        <div class="col-sm-10">
+            <select class="form-control" id="deposit" name="deposit" value="Chỉ áp dụng với phương thức debit card">
+                <option value="" disabled selected>Chỉ áp dụng với phương thức debit card : Cọc 50% giá trị vé</option>
+               
+            </select>
+        </div>
+    </div>
+    
+        <div class="form-group row">
+          <label for="inputEmail" class="col-sm-2 col-form-label"><strong>Gía vé</strong> </label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="cost" placeholder="cost" name="cost" required>
+            </div>
+          </div> 
+          
+          <div class="form-group row">
+          <label for="inputEmail" class="col-sm-2 col-form-label"><strong>Tải vé lên<br>(Nếu có)</strong> </label>
+            <div class="col-sm-10">
+              <input type="file" class="form-control" id="img" placeholder="upload image" name="img" required>
+            </div>
+          </div> 
+          <div class="form-group row">
+            <label for="paymentMethod" class="col-sm-2 col-form-label"><strong>Bạn muốn?</strong></label>
+            <div class="col-sm-10">
+                <select class="form-control" id="paymentMethod" name="paymentMethod">
+                    <option value="debit">Có thể mua số lượng vé bất kỳ</option>
+                    <option value="credit">Tất cả các vé phải được mua cùng nhau</option>
+                    <option value="momo">Ngăn chặn một vé còn lại chưa bán được</option>
+                    <option value="bank">Ngăn chặn số lượng vé lẻ còn lại chưa bán được</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="form-group row">
+          <div class="col-sm-10 offset-sm-2">
+            <button  class="btn btn-primary" id= "submit" name ="submit">Thêm sự kiện</button>
+          </div>
+        </div>
+    
+          </fieldset>
+          </form>
+        </div>
+    <section id="newletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Đăng kí để nhận thông báo</h4>
+            <p>Nhận thông tin cập nhật qua Email về thông báo mới nhất của chúng tôi về <span> ưu đãi đặc biệt.</span></p>
+        </div>
+        <div class="form">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Your email address">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="adu">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+      document.getElementById("adu").addEventListener("click", function() {
+        // Chuyển hướng đến trang profile.html
+        window.location.href = "credit.html";
+    });
+    </script>
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo1.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> Dai Hoc Kinh Te Quoc Dan</p>
+            <p><strong>Phone: </strong> (+84)388271445</p>
+            <p><Strong>Hours:</Strong> 8:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f "></i>
+                    <i class="fab fa-instagram "></i>
+                    <i class="fab fa-twitter "></i>
+                    <i class="fab fa-youtube "></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/app.jpg" alt="">
+                <img src="img/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay.png" alt="">
+        </div>
+        
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

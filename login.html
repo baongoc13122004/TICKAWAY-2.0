@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKAWAY</title>
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Tạo tài khoản </h1>
+                <div class="social-container">
+                    <a href="#" class="social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </a>
+                    
+                </div>
+                <span>Đăng nhập bằng email</span>
+                <input type="text" placeholder="Tên đăng nhập">
+                <input type="email" placeholder="Email">
+                <input type="Password" placeholder="Nhập mật khẩu">
+                <button>Đăng kí</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Đăng nhập</h1>
+                <div class="social-container">
+                    <a href="#" class="social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </a>
+                    
+                </div>
+                <span>Bạn đã có tài khoản</span>
+                <input type="email" placeholder="Email">
+                <input type="Password" placeholder="Nhập mật khẩu">
+                <a href="#">Quên mật khẩu?</a>
+                <button>Đăng nhập</button>
+            </form>
+
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Chào mừng trở lại</h1>
+                    <p>Hãy đăng nhập để giữ kết nối với chúng tôi</p>
+                    <button class="ghost" id="signIn">Đăng nhập</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Xin chào</h1>
+                    <p>Nhập thông tin cá nhân của bạn</p>
+                    <button class="ghost" id="signUp">Đăng kí</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const byId= (id) =>{
+            return document.getElementById(id);
+        };
+
+        const $signUpbutton = byId('signUp');
+        const $signInbutton = byId('signIn');
+        const $container = byId('container');
+
+        $signUpbutton.addEventListener(
+            'click',
+            () => {
+                $container.classList.add('right-panel-active');
+            }
+        );
+
+        $signInbutton.addEventListener(
+            'click',
+            () => {
+                $container.classList.remove('right-panel-active');
+            }
+        );
+    </script>
+</body>
+</html>
